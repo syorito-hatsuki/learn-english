@@ -15,11 +15,6 @@
   "license": "MIT Licence",
   "icon": "assets/learnenglish/icon.png",
   "environment": "client",
-  "entrypoints": {
-    "client": [
-      "dev.syoritohatsuki.learnenglish.client.LearnEnglishClient"
-    ]
-  },
   "custom": {
     "modmenu": {
       "links": {
