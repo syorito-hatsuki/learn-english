@@ -1,26 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "${modId}",
+  "id": "learn-english",
   "version": "${modVersion}",
   "name": "${modName}",
-  "description": "${modDescription}",
+  "description": "Using English in Minecraft connects you with players worldwide, enhancing your game experience and language skills. It's a fun and practical way to learn, opening doors to global friendships and future career opportunities. Let's build and learn together in English!",
   "authors": [
     "Syorito Hatsuki"
   ],
   "contact": {
     "homepage": "https://syorito-hatsuki.dev/",
-    "issues": "https://github.com/syorito-hatsuki/${modId}/issues",
-    "sources": "https://github.com/syorito-hatsuki/${modId}"
+    "issues": "https://github.com/syorito-hatsuki/learn-english/issues",
+    "sources": "https://github.com/syorito-hatsuki/learn-english"
   },
   "license": "MIT Licence",
-  "icon": "assets/${modId}/icon.png",
-  "environment": "*",
+  "icon": "assets/learnenglish/icon.png",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      {
-        "adapter": "kotlin",
-        "value": "dev.syoritohatsuki.${modId}.TemplateMod"
-      }
+    "client": [
+      "dev.syoritohatsuki.learnenglish.client.LearnEnglishClient"
     ]
   },
   "custom": {
@@ -39,13 +36,12 @@
       }
     ]
   },
+  "accessWidener": "learnenglish.accesswidener",
   "mixins": [
-    "${modId}.mixins.json"
+    "learnenglish.mixins.json"
   ],
   "depends": {
-    "fabric": "*",
-    "fabricloader": ">=${loaderVersion}",
-    "fabric-language-kotlin": ">=${fabricKotlinVersion}",
+    "fabricloader": "*",
     "minecraft": ">=${minecraftVersion}",
     "java": ">=${javaVersion}"
   },

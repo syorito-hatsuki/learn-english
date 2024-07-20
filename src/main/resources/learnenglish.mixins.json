@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "dev.syoritohatsuki.learnenglish.client.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [],
+  "client": [
+    "LanguageEntryMixin",
+    "LanguageOptionsScreenMixin"
+  ]
+}
