@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/syorito-hatsuki/learn-english">
-    <img src="https://github.com/syorito-hatsuki/learn-english/blob/1.21/src/main/resources/assets/learn-english/icon.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/syorito-hatsuki/learn-english/blob/1.21/src/main/resources/assets/learnenglish/icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Learn English</h3>
