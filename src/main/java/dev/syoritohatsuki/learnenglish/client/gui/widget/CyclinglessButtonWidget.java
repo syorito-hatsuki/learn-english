@@ -41,7 +41,6 @@ public class CyclinglessButtonWidget<T> extends PressableWidget {
         this.optionTextOmitted = optionTextOmitted;
     }
 
-
     @Override
     public void onPress() {
         List<T> list = this.values.getCurrent();
@@ -56,7 +55,7 @@ public class CyclinglessButtonWidget<T> extends PressableWidget {
     }
 
     @Override
-    public boolean mouseScrolled(double mouseX, double mouseY, double horizontalAmount, double verticalAmount) {
+    public boolean mouseScrolled(double mouseX, double mouseY, double amount) {
         return true;
     }
 
@@ -119,9 +118,29 @@ public class CyclinglessButtonWidget<T> extends PressableWidget {
         private final Function<T, Text> valueToText;
         private CyclinglessButtonWidget.Values<T> values = CyclinglessButtonWidget.Values.of(ImmutableList.<T>of());
         private boolean optionTextOmitted;
+        private int x;
+        private int y;
+        private int width = 150;
+        private int height = 20;
 
         public Builder(Function<T, Text> valueToText) {
             this.valueToText = valueToText;
+        }
+
+        public CyclinglessButtonWidget.Builder<T> position(int x, int y) {
+            this.x = x;
+            this.y = y;
+            return this;
+        }
+
+        public CyclinglessButtonWidget.Builder<T> size(int width, int height) {
+            this.width = width;
+            this.height = height;
+            return this;
+        }
+
+        public CyclinglessButtonWidget.Builder<T> dimensions(int x, int y, int width, int height) {
+            return position(x, y).size(width, height);
         }
 
         public CyclinglessButtonWidget.Builder<T> values(Collection<T> values) {
@@ -162,7 +181,7 @@ public class CyclinglessButtonWidget<T> extends PressableWidget {
         }
 
         public CyclinglessButtonWidget<T> build(Text optionText, CyclinglessButtonWidget.UpdateCallback<T> callback) {
-            return this.build(0, 0, 150, 20, optionText, callback);
+            return this.build(x, y, width, height, optionText, callback);
         }
 
         public CyclinglessButtonWidget<T> build(int x, int y, int width, int height, Text optionText, CyclinglessButtonWidget.UpdateCallback<T> callback) {

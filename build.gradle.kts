@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
-val javaVersion = JavaVersion.VERSION_21
+val javaVersion = JavaVersion.VERSION_17
 val loaderVersion: String by project
 val mavenGroup: String by project
 val minecraftVersion: String by project
@@ -30,9 +30,10 @@ dependencies {
 
     modImplementation("net.fabricmc", "fabric-loader", loaderVersion)
 
-    modImplementation("maven.modrinth", "language-reload", "1.6.1+1.21")
+    modImplementation("maven.modrinth", "language-reload", "1.6.1+1.20.1")
 
-    modImplementation("net.fabricmc.fabric-api", "fabric-api", "0.100.7+1.21")
+    val fabricVersion: String by project
+    modImplementation("net.fabricmc.fabric-api", "fabric-api", fabricVersion)
 
     val modMenuBadgesLibVersion: String by project
     include(modImplementation("maven.modrinth", "modmenu-badges-lib", modMenuBadgesLibVersion))
@@ -48,7 +49,7 @@ tasks {
 
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         compilerOptions { 
-            jvmTarget.set(JvmTarget.JVM_21)
+            jvmTarget.set(JvmTarget.JVM_17)
         }
     }
 
