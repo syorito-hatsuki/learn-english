@@ -30,7 +30,7 @@ dependencies {
 
     modImplementation("net.fabricmc", "fabric-loader", loaderVersion)
 
-    modImplementation("maven.modrinth", "language-reload", "1.6.1+1.20.1")
+    modImplementation("maven.modrinth", "language-reload", "1.6.1+1.20.2")
 
     val fabricVersion: String by project
     modImplementation("net.fabricmc.fabric-api", "fabric-api", fabricVersion)
