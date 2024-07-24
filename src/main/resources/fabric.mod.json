@@ -42,5 +42,8 @@
   },
   "recommends": {
     "modmenu-badges-lib": "*"
+  },
+  "suggests": {
+    "language-reload": "*"
   }
 }

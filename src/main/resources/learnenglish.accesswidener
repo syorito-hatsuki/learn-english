@@ -1,3 +1,4 @@
 accessWidener v2 named
 
 accessible class net/minecraft/client/gui/screen/option/LanguageOptionsScreen$LanguageSelectionListWidget
+accessible field net/minecraft/client/gui/screen/option/LanguageOptionsScreen$LanguageSelectionListWidget$LanguageEntry languageCode Ljava/lang/String;

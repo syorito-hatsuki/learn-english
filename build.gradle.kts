@@ -30,6 +30,10 @@ dependencies {
 
     modImplementation("net.fabricmc", "fabric-loader", loaderVersion)
 
+    modImplementation("maven.modrinth", "language-reload", "1.6.1+1.21")
+
+    modImplementation("net.fabricmc.fabric-api", "fabric-api", "0.100.7+1.21")
+
     val modMenuBadgesLibVersion: String by project
     include(modImplementation("maven.modrinth", "modmenu-badges-lib", modMenuBadgesLibVersion))
 }
