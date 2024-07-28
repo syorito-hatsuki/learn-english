@@ -48,7 +48,7 @@
 
 ![In-Game ScreenShot][screenshot]
 
-Using English in Minecraft connects you with players worldwide, enhancing your game experience and language skills. It's
+Mod removes the possibility of using non-English languages. Using English in Minecraft connects you with players worldwide, enhancing your game experience and language skills. It's
 a fun and practical way to learn, opening doors to global friendships and future career opportunities. Let's build and
 learn together in English!
 
